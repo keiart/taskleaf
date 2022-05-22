@@ -11,6 +11,10 @@ class TasksController < ApplicationController
     @task = Task.new
   end
 
+  def edit
+    @task = Task.find(params[:id])
+  end
+
   def create
     @task = Task.new(task_params)
     if @task.save
@@ -18,10 +22,6 @@ class TasksController < ApplicationController
     else
       render :new
     end
-  end
-
-  def edit
-    @task = Task.find(params[:id])
   end
 
   def update
