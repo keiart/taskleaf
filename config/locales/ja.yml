@@ -1,0 +1,11 @@
+--2022-05-21 21:16:28--  https://raw.githubusercontent.com/svenfuchs/rails-i18n/master/rails/locale/ja.yml
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.108.133, 185.199.109.133, 185.199.110.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.108.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 5117 (5.0K) [text/plain]
+Saving to: ‘ja.yml’
+
+     0K ....                                                  100% 16.8M=0s
+
+2022-05-21 21:16:28 (16.8 MB/s) - ‘ja.yml’ saved [5117/5117]
+
