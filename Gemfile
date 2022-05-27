@@ -50,7 +50,7 @@ group :test do
   gem "selenium-webdriver", ">= 4.0.0.rc1"
   # Easy installation and use of web drivers to run system tests with browsers
   gem "webdrivers"
-  gem "rspec-rails", "~> 3.7"
+  gem "rspec-rails", "~> 4.1.0"
   gem "factory_bot_rails", "~> 4.11"
 end
 
