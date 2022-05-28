@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  before_action :set_locale
   helper_method :current_user
   before_action :login_required
 
@@ -12,5 +13,10 @@ class ApplicationController < ActionController::Base
   # ログイン制限
   def login_required
     redirect_to login_path unless current_user
+  end
+
+  # 言語の設定
+  def set_locale
+    # I18n.locale = current_user&.locale || :en # ログインしていない場合
   end
 end
