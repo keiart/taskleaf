@@ -3,9 +3,7 @@ class TasksController < ApplicationController
 
   def index
     @q = current_user.tasks.ransack(params[:q])
-    @tasks = @q.result(distinct: true).recent
-    #ログインユーザーのタスクのみ表示する
-    # @tasks = current_user.tasks.recent
+    @tasks = @q.result(distinct: true)
   end
 
   def show
