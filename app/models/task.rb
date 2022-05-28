@@ -9,6 +9,16 @@ class Task < ApplicationRecord
 
   scope :recent, -> { order(created_at: :desc) }
 
+  # 指定したカラムのみ検索に使用する
+  def self.ransackable_attributes(auth_object = nil)
+    %w[name created_at]
+  end
+
+  # 空の配列でオーバーライド
+  def self.ransackable_associations(auth_object = nil)
+    []
+  end
+
   private
 
   def set_nameless_name

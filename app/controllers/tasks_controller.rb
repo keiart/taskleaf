@@ -2,8 +2,10 @@ class TasksController < ApplicationController
   before_action :set_task, only: [:show, :edit, :update, :destroy]
 
   def index
+    @q = current_user.tasks.ransack(params[:q])
+    @tasks = @q.result(distinct: true).recent
     #ログインユーザーのタスクのみ表示する
-    @tasks = current_user.tasks.recent
+    # @tasks = current_user.tasks.recent
   end
 
   def show
